@@ -85,7 +85,7 @@ async def start(bot, message):
               InlineKeyboardButton(GROUP, url=HAAAAAAAAA),
               InlineKeyboardButton(CHANNEL, url=CHANNEL_LINK)
               ],[
-              InlineKeyboardButton('ℹ️ Help', callback_data='help'),
+              InlineKeyboardButton('🧯 Help', callback_data='help'),
               InlineKeyboardButton('😊 About', callback_data='about')
               ]]
         ),
@@ -105,20 +105,20 @@ async def help(bot, message):
         reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                         InlineKeyboardButton("Filter♂️", callback_data="filter1"),
-                         InlineKeyboardButton("AutoFilter♂️", callback_data="autofilter1")
+                         InlineKeyboardButton("Filter ", callback_data="filter1"),
+                         InlineKeyboardButton("AutoFilter", callback_data="autofilter1")
                     ],
                     [
-                         InlineKeyboardButton("Extra Mode♂️", callback_data="info"),
-                         InlineKeyboardButton("Connection♂️", callback_data="connection")
+                         InlineKeyboardButton("Extra Mode", callback_data="info"),
+                         InlineKeyboardButton("Connection", callback_data="connection")
                     ],
                     [
-                         InlineKeyboardButton("🤠 Status 🤠", callback_data="ooooooooo")
+                         InlineKeyboardButton("🎯 Live Bot Status 🎯", callback_data="ooooooooo")
                     ],
                     [
-                         InlineKeyboardButton("🏕️ Home", callback_data="start"),
-                         InlineKeyboardButton("🗑️ Close 🗑️", callback_data="close"),
-                         InlineKeyboardButton("About 🔥", callback_data="about")
+                         InlineKeyboardButton("🏠 Home", callback_data="start"),
+                         InlineKeyboardButton("Close 🔒", callback_data="close"),
+                         InlineKeyboardButton("About 🤗", callback_data="about")
 
                     ]
                 ]
@@ -138,21 +138,21 @@ async def about(bot, message):
                     [
                          InlineKeyboardButton
                              (
-                                 "📦 Source", callback_data="source"
+                                 "🤮 Source", callback_data="source"
                              ),
                          InlineKeyboardButton
                              (
-                                 "Dev 🤠", callback_data="devmuhammed"
+                                 "Developer 🕵‍♂️", callback_data="devmuhammed"
                              )
                     ],
                     [
                          InlineKeyboardButton
                              (
-                                 "🏕️ Home", callback_data="start"
+                                 "🏠 Home", callback_data="start"
                              ),
                          InlineKeyboardButton
                              (
-                                 "Close 🗑️", callback_data="close"
+                                 "Close 🔒", callback_data="close"
                              )
                     ]
                 ]
@@ -171,29 +171,29 @@ async def sub(bot, message):
                     [
                          InlineKeyboardButton
                              (                                 
-                                 "📣Group", url="t.me/mo_tech_group"
+                                 "🍿 Group", url="t.me/wolfpackmedia"
                              ),
                          InlineKeyboardButton
                              (
-                                 "📢Channel", url="t.me/mo_tech_yt"
+                                 "Channel 🍿", url="t.me/wpm_ott"
                              )
                     ],
                     [
                          InlineKeyboardButton
                              (
-                                 "😟 Build a New Bot 😟", url="https://youtu.be/NrbMc93aCzA"
+                                 "🚸 Join My Main Channel 🚸", url="t.me/wpm_ott"
                              )
                     ],
                     [
                          InlineKeyboardButton
                              (
-                                 "💥Subscribe youtube Channel💥", url="https://www.youtube.com/c/MoTech_YT"
+                                 "💥 Join My Channel💥", url="t.me/wpm_ott"
                              )
                     ],
                     [
                          InlineKeyboardButton
                              (
-                                 "🗑️ Close 🗑️", callback_data="close"
+                                 " Close 🔒", callback_data="close"
                              )
                     ]
                 ]
@@ -326,7 +326,7 @@ async def settings(bot, update):
     text+=f"\nYou Can Use This Menu To Change Connectivity And Know Status Of Your Every Connected Channel, Change Filter Types, Configure Filter Results"
     
     buttons = [[
-        InlineKeyboardButton("📣 Channels 📣", callback_data=f"channel_list({chat_id})")
+        InlineKeyboardButton("🍿 Channels 🍿", callback_data=f"channel_list({chat_id})")
         ],[
         InlineKeyboardButton("📚 Filter Types 📚", callback_data=f"types({chat_id})")
         ],[
