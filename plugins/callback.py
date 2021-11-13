@@ -349,10 +349,18 @@ async def cb_handler(client, query):
        )
     elif query.data == "devmuhammed":
         await query.message.edit_text(Translation.DEV_TEXT, reply_markup=InlineKeyboardMarkup(
-               [
-                  
+                 [
+
+                   [
+
                        InlineKeyboardButton("🔙 Back", callback_data="about"),
-                       
+
+                       InlineKeyboardButton("🥳 Credits", callback_data="creditsmuhammmed")
+
+                   ]
+
                ]
+
            )
-       
+
+       )
