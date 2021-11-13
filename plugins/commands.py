@@ -47,7 +47,7 @@ async def start(bot, message):
             await message.reply_text(
                 text=FORCE_SUB_TEXT.format(message.from_user.mention),
                 reply_markup=InlineKeyboardMarkup([
-                    [ InlineKeyboardButton(text="🔔 Join", url=f"https://t.me/{update_channel}")]       
+                    [ InlineKeyboardButton(text="➡️ 𝗝𝗢𝗜𝗡 𝗠𝗬 𝗠𝗔𝗜𝗡 𝗖𝗛𝗔𝗡𝗡𝗘𝗟", url=f"https://t.me/{update_channel}")]       
               ])
             )
             return
