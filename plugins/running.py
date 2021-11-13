@@ -545,16 +545,15 @@ async def auto_filter(bot, update):
             imdb = await donlee_imdb(the_query)
             await bot.send_photo(
                 photo=movie_url,
-                caption=f"""↪️ Requested: {query}
-🎞️ Title: <a href={imdb['url']}>{imdb.get('title')}
-🎭 Genres: {imdb.get('genres')}
-📆 Year: <a href={imdb['url']}/releaseinfo>{imdb.get('year')}</a>
-🌟 Rating: <a href={imdb['url']}/ratings>{imdb.get('rating')}</a> / 10
-🗃️ Total Files : {(len_results)}
-📑 Total Page : 1/{len_result if len_result < max_pages else max_pages}
-👤 Requested By : {update.from_user.mention}
-🖋 StoryLine: <code>{imdb.get('plot')} </code>"
-☑️ Chat : {update.chat.title}""",
+                caption=f"""<b>🎬 𝖳𝗂𝗍𝗅𝖾 : <a href={imdb['url']}>{imdb.get('title')}
+
+📆 Year : <a href={imdb['url']}/releaseinfo>{imdb.get('year')}</a>
+
+🎭 Genres : {imdb.get('genres')}
+
+🌟 Rating : <a href={imdb['url']}/ratings>{imdb.get('rating')}</a> / 10
+
+🕊 Request By : {update.from_user.mention} </b>""",
                 reply_markup=reply_markup,
                 chat_id=update.chat.id,
                 reply_to_message_id=update.message_id,
@@ -567,12 +566,11 @@ async def auto_filter(bot, update):
           try:
               await bot.send_message(
                 chat_id = update.chat.id,
-                text=f"""↪️ Requested: {query}
-🗃️ Total Files : {(len_results)}
-📑 Total Page : 1/{len_result if len_result < max_pages else max_pages}
-👤 Requested By : {update.from_user.mention}
-☑️ Chat : {update.chat.title}
-""",
+                text=f"""<b>🎬 𝖳𝗂𝗍𝗅𝖾 : <a href={imdb['url']}>{imdb.get('title')}
+📆 Year : <a href={imdb['url']}/releaseinfo>{imdb.get('year')}</a>
+🎭 Genres : {imdb.get('genres')}
+🌟 Rating : <a href={imdb['url']}/ratings>{imdb.get('rating')}</a> / 10
+🕊 Request By : {update.from_user.mention} </b>""",
                 reply_markup=reply_markup,
                 parse_mode="html",
                 reply_to_message_id=update.message_id
