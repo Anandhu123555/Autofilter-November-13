@@ -355,7 +355,7 @@ async def cb_handler(client, query):
 
                        InlineKeyboardButton("🔙 Back", callback_data="about"),
 
-                       InlineKeyboardButton("🥳 Credits", callback_data="creditsmuhammmed")
+                       InlineKeyboardButton("👨‍🔬 𝗢𝗡𝗪𝗘𝗥 👨‍🔬", url="t.me/mhd_thanzeer")
 
                    ]
 
