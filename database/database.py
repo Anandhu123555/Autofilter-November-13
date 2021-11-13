@@ -61,7 +61,7 @@ async def google_search(bot, update):
     chat_id = update.chat.id,
     text=SPELLING_MODE.format(update.from_user.mention),
     parse_mode="html",
-    reply_markup=GOOGLE_NAME([[GOOGLE_LINK("🔍 Search Google 🔎", url="https://google.com/search?q={search}")]]),
+    reply_markup=GOOGLE_NAME([[GOOGLE_LINK("🔍 Search Google 🔎", url="https://google.com/search?q=Enter Your Movie Name Here ")]]),
     reply_to_message_id=update.message_id
     )
     await asyncio.sleep(60) # in seconds
