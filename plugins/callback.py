@@ -235,20 +235,20 @@ async def cb_handler(client, query):
         await query.message.edit_text(Translation.HELP_TEXT, reply_markup=InlineKeyboardMarkup(
                [
                    [
-                         InlineKeyboardButton("Filter♂️", callback_data="filter1"),
-                         InlineKeyboardButton("AutoFilter♂️", callback_data="autofilter1")
+                         InlineKeyboardButton("Filter ", callback_data="filter1"),
+                         InlineKeyboardButton("AutoFilter", callback_data="autofilter1")
                    ],
                    [
-                         InlineKeyboardButton("Extra Mode♂️", callback_data="info"),
-                         InlineKeyboardButton("Connection♂️", callback_data="connection")
+                         InlineKeyboardButton("Extra Mode", callback_data="info"),
+                         InlineKeyboardButton("Connection", callback_data="connection")
                    ],
                    [
-                         InlineKeyboardButton("🤠 Status 🤠", callback_data="ooooooooo")
+                         InlineKeyboardButton("🎯 Bot Live Status 🎯", callback_data="ooooooooo")
                    ],
                    [
-                         InlineKeyboardButton("🏕️ Home", callback_data="start"),
-                         InlineKeyboardButton("🗑️ Close 🗑️", callback_data="close"),
-                         InlineKeyboardButton(" About 🔥", callback_data="about")
+                         InlineKeyboardButton("🏠 Home", callback_data="start"),
+                         InlineKeyboardButton(" Close ❌️", callback_data="close"),
+                         InlineKeyboardButton(" About 😘", callback_data="about")
                    ]
                ]
            )  
@@ -257,12 +257,12 @@ async def cb_handler(client, query):
         await query.message.edit_text(Translation.ABOUT_TEXT.format(BOT_USERNAME, DEV_USERNAME, DEV_NAME, BOT_USERNAME), reply_markup=InlineKeyboardMarkup(
                [
                    [
-                         InlineKeyboardButton("📦 Source", callback_data="source"),
-                         InlineKeyboardButton("Dev 🤠", callback_data="devmuhammed")
+                         InlineKeyboardButton("🤮 Source", callback_data="source"),
+                         InlineKeyboardButton("Developer 🕵‍♂", callback_data="devmuhammed")
                    ],
                    [
-                         InlineKeyboardButton("🏕️ Home", callback_data="start"),
-                         InlineKeyboardButton("Close 🗑️", callback_data="close")
+                         InlineKeyboardButton("🏠 Home", callback_data="start"),
+                         InlineKeyboardButton("Close 🔒", callback_data="close")
                    ]
                ]
            )
@@ -328,14 +328,6 @@ async def cb_handler(client, query):
     elif query.data == "source":
         await query.message.edit_text(Translation.SOURCE_TEXT, reply_markup=InlineKeyboardMarkup(
                [
-                   [
-                       InlineKeyboardButton('☢️Frok', url='https://github.com/PR0FESS0R-99/DonLee-Robot-V2/fork'),
-                       InlineKeyboardButton('🌟Star', url='https://github.com/PR0FESS0R-99/DonLee-Robot-V2/stargazers')
-                   ],
-                   [
-                       InlineKeyboardButton('🏵Repo', url='https://youtu.be/NrbMc93aCzA'),
-                       InlineKeyboardButton('🧩Deplow', url='https://youtu.be/NrbMc93aCzA')
-                   ],
                    [
                        InlineKeyboardButton("🔙 Back 🔙", callback_data="help")
                    ]
