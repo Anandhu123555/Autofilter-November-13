@@ -189,14 +189,14 @@ async def cb_settings(bot, update: CallbackQuery):
     text+=f"\nYou Can Use This Menu To Change Connectivity And Know Status Of Your Every Connected Channel, Change Filter Types, Configure Filter Results And To Know Status Of Your Group..."
     
     buttons = [[
-        InlineKeyboardButton("📣 Channels 📣", callback_data=f"channel_list({chat_id})")
+        InlineKeyboardButton("🍿 Channels 🍿", callback_data=f"channel_list({chat_id})")
         ],[             
-        InlineKeyboardButton("📖 Filter Types 📖", callback_data=f"types({chat_id})")
+        InlineKeyboardButton("🔀 Filter Types 🔀", callback_data=f"types({chat_id})")
         ],[
         InlineKeyboardButton("🛠 Configure 🛠", callback_data=f"config({chat_id})")
         ],[
-        InlineKeyboardButton("👩‍👦‍👦 Group Status", callback_data=f"status({chat_id})"), 
-        InlineKeyboardButton("🤖 Bot Status", callback_data=f"about({chat_id})")
+        InlineKeyboardButton("🧯 Group Status", callback_data=f"status({chat_id})"), 
+        InlineKeyboardButton("🔧 Bot Status", callback_data=f"about({chat_id})")
         ],[
         InlineKeyboardButton("🔐 Close 🔐", callback_data="close")
         ]]
@@ -242,8 +242,8 @@ async def cb_warn(bot, update: CallbackQuery):
         text+=f"\nThis Will Erase All Files From DB.."
         
     buttons = [[
-        InlineKeyboardButton("✅️Yes", callback_data=f"{action}({channel_id}|{channel_name})"), 
-        InlineKeyboardButton("No❎️", callback_data="close")
+        InlineKeyboardButton("✅️ Yes", callback_data=f"{action}({channel_id}|{channel_name})"), 
+        InlineKeyboardButton("No ❎️", callback_data="close")
         ]]
     
     reply_markup = InlineKeyboardMarkup(buttons)
