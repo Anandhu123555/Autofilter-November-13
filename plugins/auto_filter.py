@@ -127,26 +127,17 @@ async def cb_navg(bot, update: CallbackQuery):
         achatId = None
     
     reply_markup = InlineKeyboardMarkup(temp_results)
-    text=f"""
-↪️ Requested: {query}
-🗃️ Total Files : {leng}
-📑 Total Page : 1/{index_val + 1}/{len(results) if len(results) < max_pages else max_pages}
-👤 Requested By : {update.from_user.mention}"""
+    text=f""" 🕊 Request By : {update.from_user.mention}"""
         
     try:
         imdb = await donlee_imdb(query)
         await update.message.edit_caption(
                 caption=f"""
-↪️ Requested: {query}
-
-🎞️ Title: <a href={imdb['url']}>{imdb.get('title')}
-🎭 Genres: {imdb.get('genres')}
-📆 Year: <a href={imdb['url']}/releaseinfo>{imdb.get('year')}</a>
-🌟 Rating: <a href={imdb['url']}/ratings>{imdb.get('rating')}</a> / 10
-🗃️ Total Files : {leng}
-📑 Total Page : 1/{index_val + 1}/{len(results) if len(results) < max_pages else max_pages}
-👤 Requested By : {update.from_user.mention}
-🖋 StoryLine: <code>{imdb.get('plot')} </code>""",
+<b>🎬 𝖳𝗂𝗍𝗅𝖾 : <a href={imdb['url']}>{imdb.get('title')}
+📆 Year : <a href={imdb['url']}/releaseinfo>{imdb.get('year')}</a>
+🎭 Genres : {imdb.get('genres')}
+🌟 Rating : <a href={imdb['url']}/ratings>{imdb.get('rating')}</a> / 10
+🕊 Request By : {update.from_user.mention} </b>""",
                 reply_markup=reply_markup,
                 parse_mode="html"
         )
@@ -165,16 +156,12 @@ async def cb_navg(bot, update: CallbackQuery):
               imdb = await donlee_imdb(query)
               await update.message.edit_caption(
                 caption=f"""
-↪️ Requested: {query}
 
-🎞️ Title: <a href={imdb['url']}>{imdb.get('title')}
-🎭 Genres: {imdb.get('genres')}
-📆 Year: <a href={imdb['url']}/releaseinfo>{imdb.get('year')}</a>
-🌟 Rating: <a href={imdb['url']}/ratings>{imdb.get('rating')}</a> / 10
-🗃️ Total Files : {leng}
-📑 Total Page : 1/{index_val + 1}/{len(results) if len(results) < max_pages else max_pages}
-👤 Requested By : {update.from_user.mention}
-🖋 StoryLine: <code>{imdb.get('plot')} </code>""",
+<b>🎬 𝖳𝗂𝗍𝗅𝖾 : <a href={imdb['url']}>{imdb.get('title')}
+📆 Year : <a href={imdb['url']}/releaseinfo>{imdb.get('year')}</a>
+🎭 Genres : {imdb.get('genres')}
+🌟 Rating : <a href={imdb['url']}/ratings>{imdb.get('rating')}</a> / 10
+🕊 Request By : {update.from_user.mention} </b>""",
                 reply_markup=reply_markup,
                 parse_mode="html"
               )
